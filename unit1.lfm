@@ -1,0 +1,69 @@
+object frmMain: TfrmMain
+  Left = 316
+  Height = 550
+  Top = 194
+  Width = 800
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = '随机数抽取器'
+  ClientHeight = 550
+  ClientWidth = 800
+  Color = 14737632
+  Position = poScreenCenter
+  LCLVersion = '1.2.4.0'
+  object lblMain: TLabel
+    Left = 0
+    Height = 400
+    Top = 0
+    Width = 800
+    Align = alTop
+    Alignment = taCenter
+    Caption = '54'
+    Font.CharSet = GB2312_CHARSET
+    Font.Color = clBlack
+    Font.Height = -400
+    Font.Name = '黑体'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentBidiMode = False
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblAboutTitle: TLabel
+    Left = 24
+    Height = 33
+    Top = 408
+    Width = 192
+    Caption = '随机数抽取器'
+    Font.CharSet = GB2312_CHARSET
+    Font.Color = clBlack
+    Font.Height = -32
+    Font.Name = '宋体'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblNameEN: TLabel
+    Left = 30
+    Height = 14
+    Top = 450
+    Width = 140
+    Caption = 'Random number picker'
+    Font.CharSet = GB2312_CHARSET
+    Font.Color = clBlack
+    Font.Height = -14
+    Font.Name = '宋体'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblV: TLabel
+    Left = 26
+    Height = 12
+    Top = 474
+    Width = 36
+    Caption = 'Ver0.1'
+    ParentColor = False
+  end
+end

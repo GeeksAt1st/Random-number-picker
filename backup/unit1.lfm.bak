@@ -1,0 +1,11 @@
+object frmMain: TfrmMain
+  Left = 287
+  Height = 600
+  Top = 189
+  Width = 800
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = '随机数抽取器'
+  Color = 14737632
+  Position = poScreenCenter
+  LCLVersion = '1.2.4.0'
+end
