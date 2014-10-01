@@ -1,18 +1,18 @@
 object frmMain: TfrmMain
-  Left = 370
+  Left = 381
   Height = 548
-  Top = 169
+  Top = 216
   Width = 798
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = '随机数抽取器'
   ClientHeight = 548
   ClientWidth = 798
-  Color = 14737632
+  Color = 15461355
   Position = poScreenCenter
   LCLVersion = '1.2.4.0'
   object lblMain: TLabel
     Left = 0
-    Height = 400
+    Height = 373
     Top = 0
     Width = 798
     Align = alTop
@@ -20,7 +20,7 @@ object frmMain: TfrmMain
     Caption = '??'
     Font.CharSet = GB2312_CHARSET
     Font.Color = clBlack
-    Font.Height = -400
+    Font.Height = -373
     Font.Name = '黑体'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
@@ -82,7 +82,7 @@ object frmMain: TfrmMain
     Width = 232
     Alignment = taCenter
     Font.CharSet = GB2312_CHARSET
-    Font.Color = clBlack
+    Font.Color = clSilver
     Font.Height = -24
     Font.Name = '宋体'
     Font.Pitch = fpVariable
@@ -111,13 +111,13 @@ object frmMain: TfrmMain
   end
   object lblWarning: TLabel
     Left = 320
-    Height = 17
+    Height = 13
     Top = 480
-    Width = 90
-    Caption = 'lblWarning'
+    Width = 234
+    Caption = '警告：您输入了除数字以外的其他字符！'
     Font.CharSet = GB2312_CHARSET
     Font.Color = clRed
-    Font.Height = -17
+    Font.Height = -13
     Font.Name = '宋体'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
@@ -126,19 +126,27 @@ object frmMain: TfrmMain
     Visible = False
   end
   object btnOK: TButton
-    Left = 618
+    Left = 616
     Height = 74
     Top = 432
     Width = 136
-    Caption = '确定'
+    Caption = '确 定'
     Color = clMenu
+    Enabled = False
     Font.CharSet = GB2312_CHARSET
     Font.Color = clTeal
     Font.Height = -20
     Font.Name = '黑体'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
+    OnClick = btnOKClick
     ParentFont = False
     TabOrder = 1
+  end
+  object Timer1: TTimer
+    Interval = 2500
+    OnTimer = Timer1Timer
+    left = 747
+    top = 508
   end
 end
