@@ -117,6 +117,7 @@ begin
   end;
 
 
+
 procedure TfrmMain.Timer1Timer(Sender: TObject);
 begin
   lblwarning.Visible:=false;
