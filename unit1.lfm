@@ -1,26 +1,27 @@
 object frmMain: TfrmMain
-  Left = 381
-  Height = 548
-  Top = 216
-  Width = 798
+  Left = 425
+  Height = 412
+  Top = 142
+  Width = 580
   BorderIcons = [biSystemMenu, biMinimize]
-  Caption = '随机数抽取器  v0.1 Beta'
-  ClientHeight = 548
-  ClientWidth = 798
+  BorderStyle = bsSingle
+  Caption = '随机数抽取器  v0.11 Beta'
+  ClientHeight = 412
+  ClientWidth = 580
   Color = 15461355
   Position = poScreenCenter
   LCLVersion = '1.2.4.0'
   object lblMain: TLabel
     Left = 0
-    Height = 373
+    Height = 267
     Top = 0
-    Width = 798
+    Width = 580
     Align = alTop
     Alignment = taCenter
     Caption = '??'
     Font.CharSet = GB2312_CHARSET
     Font.Color = clBlack
-    Font.Height = -373
+    Font.Height = -267
     Font.Name = '黑体'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
@@ -29,15 +30,16 @@ object frmMain: TfrmMain
     ParentFont = False
   end
   object lblAboutTitle: TLabel
-    Left = 32
-    Height = 29
+    Left = 12
+    Height = 33
     Hint = 'Welcome.'
-    Top = 392
-    Width = 174
+    Top = 288
+    Width = 149
+    Anchors = [akTop, akLeft, akRight, akBottom]
     Caption = '随机数抽取器'
     Font.CharSet = GB2312_CHARSET
     Font.Color = clBlack
-    Font.Height = -29
+    Font.Height = -24
     Font.Name = '宋体'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
@@ -45,9 +47,9 @@ object frmMain: TfrmMain
     ParentFont = False
   end
   object lblNameEN: TLabel
-    Left = 36
+    Left = 12
     Height = 14
-    Top = 429
+    Top = 320
     Width = 140
     Caption = 'Random number picker'
     Font.CharSet = GB2312_CHARSET
@@ -60,12 +62,13 @@ object frmMain: TfrmMain
     ParentFont = False
   end
   object lblV: TLabel
-    Left = 36
-    Height = 80
-    Top = 453
-    Width = 208
+    Left = 12
+    Height = 48
+    Top = 342
+    Width = 149
+    Anchors = [akTop, akLeft, akRight, akBottom]
     AutoSize = False
-    Caption = 'Ver0.1       Beta'#13#10'Author: Geeks@一中'#13#10'Everything is Free in our '#13#10'group and organization.'#13#10'Welcome to joining.'
+    Caption = 'Ver 0.1       Beta'#13#10'Author: Geeks@一中'#13#10'Welcome to joining.'
     Font.CharSet = GB2312_CHARSET
     Font.Color = clBlack
     Font.Height = -16
@@ -76,9 +79,9 @@ object frmMain: TfrmMain
     ParentFont = False
   end
   object edtInput: TEdit
-    Left = 320
+    Left = 192
     Height = 32
-    Top = 432
+    Top = 320
     Width = 232
     Alignment = taCenter
     Font.CharSet = GB2312_CHARSET
@@ -95,10 +98,11 @@ object frmMain: TfrmMain
     Text = 'Input the count.'
   end
   object Label1: TLabel
-    Left = 312
-    Height = 14
-    Top = 407
-    Width = 196
+    Left = 192
+    Height = 20
+    Top = 301
+    Width = 192
+    Anchors = [akTop, akLeft, akRight, akBottom]
     Caption = '请输入数量：（不超过四位数）'
     Font.CharSet = GB2312_CHARSET
     Font.Color = clBlack
@@ -110,10 +114,11 @@ object frmMain: TfrmMain
     ParentFont = False
   end
   object lblWarning: TLabel
-    Left = 320
-    Height = 13
-    Top = 480
-    Width = 234
+    Left = 192
+    Height = 16
+    Top = 372
+    Width = 232
+    Anchors = [akTop, akLeft, akRight, akBottom]
     Caption = '警告：您输入了除数字以外的其他字符！'
     Font.CharSet = GB2312_CHARSET
     Font.Color = clRed
@@ -126,12 +131,14 @@ object frmMain: TfrmMain
     Visible = False
   end
   object btnOK: TButton
-    Left = 616
-    Height = 74
-    Top = 424
-    Width = 136
+    Left = 450
+    Height = 50
+    Top = 320
+    Width = 104
+    Anchors = [akTop, akLeft, akRight, akBottom]
     Caption = '确 定'
-    Color = clMenu
+    Color = clWindow
+    Default = True
     Enabled = False
     Font.CharSet = GB2312_CHARSET
     Font.Color = clTeal
@@ -143,10 +150,30 @@ object frmMain: TfrmMain
     ParentFont = False
     TabOrder = 1
   end
-  object Timer1: TTimer
+  object Timerwarning: TTimer
+    Enabled = False
     Interval = 2500
-    OnTimer = Timer1Timer
+    OnTimer = TimerwarningTimer
     left = 747
     top = 508
+  end
+  object Tmrmain: TTimer
+    Enabled = False
+    Interval = 150
+    OnTimer = TmrmainTimer
+    left = 680
+    top = 360
+  end
+  object Tmrstop: TTimer
+    Enabled = False
+    Interval = 2500
+    OnTimer = TmrstopTimer
+    left = 680
+    top = 400
+  end
+  object Face: TTimer
+    OnTimer = FaceTimer
+    left = 414
+    top = 282
   end
 end

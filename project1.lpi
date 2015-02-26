@@ -15,7 +15,10 @@
     </i18n>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
+      <AutoIncrementBuild Value="True"/>
       <MinorVersionNr Value="1"/>
+      <RevisionNr Value="1"/>
+      <BuildNr Value="8"/>
       <Language Value="0804"/>
       <StringTable Comments="随机数抽取器" CompanyName="geeks@一中" ProductVersion=""/>
     </VersionInfo>
@@ -62,6 +65,9 @@
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>
+      <Debugging>
+        <GenerateDebugInfo Value="False"/>
+      </Debugging>
       <Options>
         <Win32>
           <GraphicApplication Value="True"/>
